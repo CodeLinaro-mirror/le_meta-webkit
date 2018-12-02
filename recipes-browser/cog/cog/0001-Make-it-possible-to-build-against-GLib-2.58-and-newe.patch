@@ -1,0 +1,28 @@
+From 063df115456a24e464d1e6f284df22a0e65aea8e Mon Sep 17 00:00:00 2001
+From: Adrian Perez de Castro <aperez@igalia.com>
+Date: Thu, 13 Sep 2018 23:48:01 +0300
+Subject: [PATCH] Make it possible to build against GLib 2.58 and newer
+
+Starting from 2.58.0 GLib already includes the definition needed
+to use g_autoptr(GEnumClass).
+---
+ core/cog-utils.h | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/core/cog-utils.h b/core/cog-utils.h
+index 81eb4dc..1abada2 100644
+--- a/core/cog-utils.h
++++ b/core/cog-utils.h
+@@ -17,7 +17,9 @@ G_BEGIN_DECLS
+ 
+ typedef struct _GObjectClass GObjectClass;
+ 
++#if !GLIB_CHECK_VERSION(2, 58, 0)
+ G_DEFINE_AUTOPTR_CLEANUP_FUNC (GEnumClass, g_type_class_unref)
++#endif // !GLIB_CHECK_VERSION
+ 
+ 
+ char* cog_appid_to_dbus_object_path (const char *appid)
+-- 
+2.17.1
+
