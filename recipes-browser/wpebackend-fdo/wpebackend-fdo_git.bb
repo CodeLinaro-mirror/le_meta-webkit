@@ -10,8 +10,9 @@ PV = "1.0.0~git"
 # PREFERRED_VERSION_wpebackend-fdo = "1.0.0~git%"
 
 SRCREV = "${AUTOREV}"
-SRC_URI = "git://github.com/Igalia/WPEBackend-fdo.git;protocol=https;branch=master"
 
+#Below CAF project is mirror from "github.com/Igalia/WPEBackend-fdo.git"
+SRC_URI = "${CAF_GIT}/WPEBackend-fdo.git;protocol=git;branch=igalia/master"
 S = "${WORKDIR}/git"
 
 DEPENDS += " libwpe"
