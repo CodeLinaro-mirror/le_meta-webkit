@@ -10,6 +10,6 @@ PV = "1.0~git"
 # PREFERRED_VERSION_libwpe = "1.0~git%"
 
 SRCREV = "${AUTOREV}"
-SRC_URI = "git://github.com/WebPlatformForEmbedded/libwpe.git;protocol=https;branch=master"
+SRC_URI = "git://source.codeaurora.org/quic/le/libwpe.git;protocol=https;branch=libwpe/master"
 
 S = "${WORKDIR}/git"
