@@ -12,7 +12,7 @@ PV = "1.0.0~git"
 SRCREV = "${AUTOREV}"
 
 #Below CAF project is mirror from "github.com/Igalia/WPEBackend-fdo.git"
-SRC_URI = "${CAF_GIT}/WPEBackend-fdo.git;protocol=git;branch=igalia/master"
+SRC_URI = "https://git.codelinaro.org/clo/WPEBackend-fdo.git;protocol=git;branch=igalia/master"
 S = "${WORKDIR}/git"
 
 DEPENDS += " libwpe"
