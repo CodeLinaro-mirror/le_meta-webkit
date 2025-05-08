@@ -6,13 +6,14 @@
   <remote fetch="https://git.yoctoproject.org/git/" name="yocto"/>
   <remote fetch="https://github.com" name="github"/>
   <remote fetch="https://github.com/Igalia" name="igalia"/>
+  <remote fetch="https://github.com/psaavedra" name="psaavedra"/>
   <remote fetch="https://gitlab.com" name="gitlab"/>
   <remote fetch="http://code.qt.io/yocto" name="qt"/>
 
   <project remote="oe" revision="master" name="meta-openembedded" path="sources/meta-openembedded"/>
 
   <project remote="yocto" revision="master" name="poky" path="sources/poky"/>
-  <project remote="yocto" revision="master" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
+  <project remote="psaavedra" revision="fix_mesa_25" name="meta-raspberrypi" path="sources/meta-raspberrypi"/>
 
   <project remote="igalia" revision="main" name="meta-webkit.git" path="sources/meta-webkit"/>
 </manifest>
